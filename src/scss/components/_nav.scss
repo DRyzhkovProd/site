@@ -1,0 +1,44 @@
+.nav {
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+
+    &:after {
+      @include pseudo;
+      position: absolute;
+      bottom: -5px;
+      height: 1px;
+      width: 100%;
+      background-color: var(--light-color);
+      transform: scale(0);
+      transition: 0.3s;
+    }
+    &:hover:after {
+      transform: scale(1);
+    }
+
+  }
+  &__list {
+    @include flex-v-center;
+  }
+  &__link {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 19px;
+    color: var(--light-color);
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 10px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 10px;
+    }
+  }
+}

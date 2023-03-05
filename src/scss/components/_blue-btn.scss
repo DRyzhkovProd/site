@@ -1,0 +1,17 @@
+.blue-btn {
+  display: inline-block;
+  color: var(--light-color);
+  height: 60px;
+  padding: 20px 60px;
+  border-radius: 30px;
+  text-align: center;
+  background-color: var(--dark-blue-color);
+
+  @include mobile {
+    @include flex-all-center;
+    max-width: 300px;
+    height: 30px;
+    padding: 20px 30px;
+    font-size: 14px;
+  }
+}

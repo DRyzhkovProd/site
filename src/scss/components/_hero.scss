@@ -1,0 +1,73 @@
+.hero {
+  padding-top: 260px;
+  min-height: 800px;
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("../../img/hero-image.png") center/cover no-repeat;
+
+  @include tablet {
+    min-height: 600px;
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("../../img/hero-image.png")  no-repeat;
+  }
+
+  &__container {
+    @include flex-v-center;
+  }
+
+  &__content {
+    @include mobile {
+      @include flex-all-center;
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 100px;
+    font-weight: 600;
+    font-size: 58px;
+    line-height: 160%;
+    text-transform: uppercase;
+    color: var(--light-color);
+
+    @include tablet {
+      font-size: 38px;
+    }
+
+    @include mobile {
+      font-size: 18px;
+      margin-bottom: 50px;
+    }
+
+    &-text {
+      display: block;
+      text-align: center;
+      font-weight: 400;
+      margin-top: 20px;
+      font-size: 20px;
+      line-height: 160%;
+      text-transform: initial;
+    }
+  }
+
+  &__arrow {
+    display: block;
+    text-align: center;
+    animation: .5s  ease-in-out infinite alternate slidein;
+
+    @include mobile {
+      width: 30px;
+      height: 30px;
+      text-align: center  ;
+    }
+  }
+
+  @keyframes slidein {
+    from {
+      transform: translateY(0%);
+    }
+
+    to {
+      transform: translateY(10%);
+    }
+  }
+}

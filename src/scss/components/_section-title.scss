@@ -1,0 +1,11 @@
+.section-title {
+  margin-bottom: 20px;
+  font-size: 42px;
+  line-height: 1.23;
+  text-align: center;
+
+  @include mobile {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+}
